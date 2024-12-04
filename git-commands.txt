@@ -1,0 +1,12 @@
+after making changes run the command:
+
+git add . 
+
+after adding the changes:
+
+git commit -m "name-comment"
+
+after commiting the changes:
+
+git push origin main
+
