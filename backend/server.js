@@ -1,0 +1,25 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config();
+const authRoutes = require("./routes/auth");
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+
+mongoose
+  .connect(
+    "mongodb+srv://jake82336:EW7DNSsD4yPCrSUw@cluster0.vy6y0.mongodb.net/"
+  )
+  .then(() => console.log("MongoDB connected"))
+  .catch((error) => console.error("MongoDB connection error:", error));
+
+const PORT = 3000;
+
+("http://localhost:3000/register");
+
+app.listen(PORT, () => {
+  console.log(`App running on port ${PORT}`);
+});
