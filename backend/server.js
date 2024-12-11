@@ -16,9 +16,9 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.error("MongoDB connection error:", error));
 
-const PORT = 3000;
+app.use("/api/users", authRoutes);
 
-("http://localhost:3000/register");
+const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}`);
