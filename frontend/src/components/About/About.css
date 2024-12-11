@@ -1,0 +1,188 @@
+.about-page {
+  margin: 0 auto;
+  padding-top: 90px;
+  padding: 30px;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.main-title::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: red;
+  margin: 10px auto 0;
+}
+
+.content-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.personal-info,
+.experience {
+  flex: 1;
+}
+
+.personal-info {
+  margin-right: 30px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  margin-top: 5px;
+}
+
+.info-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience-item {
+  margin-bottom: 20px;
+}
+
+.date {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.organization {
+  font-size: 1.1rem;
+  color: red;
+  margin: 5px 0;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.linkedin-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.linkedin-button:hover {
+  background-color: darkred;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .personal-info,
+  .experience {
+    margin: 0;
+  }
+
+  .profile-image {
+    margin: 20px 0;
+  }
+}
+
+/* Footer about section */
+
+.features {
+  display: flex;
+  justify-content: space-between; /* Adds equal spacing between bubbles */
+  align-items: flex-start;
+  padding: 40px 20px; /* Adjusts padding for better spacing */
+  gap: 20px; /* Ensures bubbles have consistent spacing */
+  background-color: #f7f7f7;
+}
+
+.feature-item {
+  flex: 1; /* Ensures the items take up equal space */
+  margin: 0 10px; /* Adds spacing around each bubble */
+  padding: 30px;
+  transition: transform 0.3s ease;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+  text-align: center;
+}
+
+.feature-item i {
+  font-size: 3rem;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.feature-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.feature-item p {
+  font-size: 1rem;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.features .feature-item .description-subtext {
+  text-align: left;
+  margin: 0;
+  font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-item {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
