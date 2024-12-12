@@ -20,8 +20,13 @@ export default function Portfolio() {
 
         <section className="portfolio-grid">
           <div className="grid-item">
-            <img src={tictactoe} alt="tictactoe" />
-            <div className="overlay"></div>
+            <a
+              href="https://suprhotdoggs.github.io/TIC-TAC-TOE-GAME/"
+              target="_blank"
+            >
+              <img src={tictactoe} alt="tictactoe" />
+              <div className="overlay"></div>
+            </a>
           </div>
           <div className="grid-item">
             <img src={Snake} alt="" />
