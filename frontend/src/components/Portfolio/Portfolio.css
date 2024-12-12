@@ -1,11 +1,11 @@
 /* Portfolio Page Styling */
 .portfolio-page {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff; /* White background */
+  background-color: #fff;
   font-family: "Montserrat", sans-serif;
   color: #333;
+  min-height: 100vh; /* Ensure it fills the viewport */
 }
 
 /* Header Section */
@@ -38,7 +38,6 @@
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 20px;
-  background-color: #f7f7f7;
   transition: all 0.3s ease;
 }
 

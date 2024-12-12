@@ -45,46 +45,48 @@ export default function Register() {
   };
 
   return (
-    <div className="register-container">
-      <h1>Register Form</h1>
+    <section id="register-section">
+      <div className="register-container">
+        <h1>Register Form</h1>
 
-      <form onSubmit={handleSubmit} className="contact-form">
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          name="name"
-          id="name"
-          placeholder="Enter your name"
-          required
-          onChange={handleChange}
-          value={formData.name}
-        />
+        <form onSubmit={handleSubmit} className="contact-form">
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+            onChange={handleChange}
+            value={formData.name}
+          />
 
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Enter your email"
-          required
-          onChange={handleChange}
-          value={formData.email}
-        />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+            onChange={handleChange}
+            value={formData.email}
+          />
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Create a password"
-          required
-          onChange={handleChange}
-          value={formData.password}
-        />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Create a password"
+            required
+            onChange={handleChange}
+            value={formData.password}
+          />
 
-        <button type="submit">Submit</button>
-      </form>
-      {message && <p>{message}</p>}
-    </div>
+          <button type="submit">Submit</button>
+        </form>
+        {message && <p>{message}</p>}
+      </div>
+    </section>
   );
 }

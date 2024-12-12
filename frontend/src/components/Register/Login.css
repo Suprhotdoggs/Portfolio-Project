@@ -1,4 +1,9 @@
 /* Container styling */
+
+.body {
+  background-color: #f7f7f7 !important;
+}
+
 .login-container {
   display: flex;
   flex-direction: column;

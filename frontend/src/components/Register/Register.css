@@ -1,3 +1,7 @@
+.register-section {
+  background-color: #f7f7f7 !important;
+}
+
 /* Container Styling */
 .register-container {
   display: flex;
@@ -8,7 +12,6 @@
   max-width: 600px; /* Reduced width for a smaller form */
   margin: 30px auto; /* Reduced margin */
   padding: 30px; /* Reduced padding */
-  background-color: #ffffff;
   border-radius: 10px; /* Slightly smaller border radius */
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   font-family: "Arial", sans-serif;
