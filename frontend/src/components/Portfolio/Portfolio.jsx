@@ -24,13 +24,31 @@ export default function Portfolio() {
               href="https://suprhotdoggs.github.io/TIC-TAC-TOE-GAME/"
               target="_blank"
             >
-              <img src={tictactoe} alt="tictactoe" />
+              <img className="tic-tac-toe" src={tictactoe} alt="tictactoe" />
               <div className="overlay"></div>
+              <p className="subtitle">Have fun playing with a friend!</p>
             </a>
           </div>
           <div className="grid-item">
-            <img src={Snake} alt="" />
-            <div className="overlay"></div>
+            <a
+              href="https://suprhotdoggs.github.io/Snake-Game/"
+              target="_blank"
+            >
+              <img src={Snake} alt="" />
+              <div className="overlay"></div>
+              <p className="subtitle">The most addicting Snake Game</p>
+            </a>
+          </div>
+
+          <div className="grid-item">
+            <a
+              href="https://suprhotdoggs.github.io/Snake-Game/"
+              target="_blank"
+            >
+              <img src={Snake} alt="" />
+              <div className="overlay"></div>
+              <p className="subtitle">The most addicting Snake Game</p>
+            </a>
           </div>
         </section>
       </div>
