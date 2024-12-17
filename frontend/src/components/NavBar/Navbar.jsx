@@ -15,8 +15,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
-const navItems = ["About", "Portfolio", "Register"];
-const navScroll = ["about", "portfolio", "/"];
+const navItems = ["About", "Portfolio", "Contact"];
+const navScroll = ["about", "portfolio", "contact", "/"];
 
 export default function Navbar({ user }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);

@@ -8,6 +8,7 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import { useEffect, useState } from "react";
 import ButtonElem from "./components/Button/Button";
 import Footer from "./components/Footer/Footer";
+import Contact from "./components/Contact/Contact";
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -56,6 +57,7 @@ export default function App() {
       <Home />
       <About />
       <Portfolio />
+      <Contact />
       <Footer />
     </div>
   );
