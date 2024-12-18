@@ -11,10 +11,9 @@ export default function Home() {
   useEffect(() => {
     const typewriter = document.querySelector(".typewriter h1");
 
-    // Total duration = 3.5s (typing) + 2s (delay)
     setTimeout(() => {
       typewriter.classList.add("typing-done");
-    }, 5500); // 3500ms for typing + 2000ms delay
+    }, 5500);
   }, []);
 
   return (

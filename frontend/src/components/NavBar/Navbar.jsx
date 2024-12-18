@@ -16,7 +16,7 @@ import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 const navItems = ["About", "Portfolio", "Contact"];
-const navScroll = ["about", "portfolio", "contact", "/"];
+const navScroll = ["about", "portfolio", "contact"];
 
 export default function Navbar({ user }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -25,10 +25,13 @@ export default function Navbar({ user }) {
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-
   const filteredNavItem = user
     ? navItems.filter((item) => item !== "Register")
     : navItems;
+
+  const filteredNavScroll = user
+    ? navScroll.filter((_, index) => navItems[index] !== "Register")
+    : navScroll;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
@@ -94,7 +97,7 @@ export default function Navbar({ user }) {
               <Button key={navItem} sx={{ color: "#fff" }}>
                 <Link
                   activeClass="active"
-                  to={navScroll[index]}
+                  to={navScroll[index] || ""}
                   spy={true}
                   smooth={true}
                   offset={-60}

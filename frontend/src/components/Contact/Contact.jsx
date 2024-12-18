@@ -47,22 +47,24 @@ export default function Contact() {
       <div className="contact-container">
         <h1>Contact Me</h1>
         <form onSubmit={handleSubmit} className="horizontal-form">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
+          <div className="input-row">
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
           <input
             type="text"
             name="subject"
@@ -78,7 +80,7 @@ export default function Contact() {
             onChange={handleChange}
             required
           ></textarea>
-          <button type="submit">Send</button>
+          <button type="submit">Send Message</button>
         </form>
         {status && <p>{status}</p>} {/* Show status message */}
       </div>

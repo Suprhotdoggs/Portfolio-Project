@@ -13,12 +13,14 @@ export default function About() {
             <div className="personal-info">
               <h2 className="section-title">My Goal</h2>
               <p className="info-text">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                debitis nostrum dicta ab eos, repellendus ut quod ipsam hic
-                voluptatem! Facilis ipsam saepe reprehenderit debitis quas
-                animi, fugiat minus repellat quam architecto optio repellendus
-                in natus eos magnam placeat odit, inventore fuga facere? Nostrum
-                nesciunt qui reprehenderit perferendis, deserunt minus?
+                As an incoming student studying math and business, I have always
+                been fascinated by the rise and fall of companies, inspiring me
+                to learn how to navigate the challenges of entrepreneurship.
+                With a growing passion for coding, my ultimate goal is to launch
+                a successful startup. Equipped with my education, I aim to
+                innovate in the tech and business world, though I am equally
+                driven to excel in a leading company if my startup journey takes
+                a different path.
               </p>
             </div>
 
@@ -32,7 +34,7 @@ export default function About() {
               <h2 className="section-title">Personal Info</h2>
               <div className="experience-item">
                 <h3>Secondary</h3>
-                <p className="date">10.2020 - Present</p>
+                <p className="date">09.2020 - 06.2024</p>
                 <p className="organization">The Anne & Max Tanenbaum CHAT</p>
                 <p className="description">
                   An incubator for students to explore innovative topics with
@@ -41,14 +43,21 @@ export default function About() {
               </div>
               <div className="experience-item">
                 <h3>Post Secondary</h3>
-                <p className="date">09.2025 - 2030</p>
+                <p className="date">2025 - 2030</p>
                 <p className="organization">
                   University of Waterloo & Wilfrid Laurier
                 </p>
                 <p className="description">
-                  The Waterloo Mathematics and Laurier BBA double degree blends
-                  analytical rigor with business strategy for leadership
-                  excellence.
+                  Waterloo’s globally ranked BMath{" "}
+                  <a
+                    className="uni-rankings"
+                    target="_blank"
+                    href="https://www.topuniversities.com/university-subject-rankings/mathematics?search=waterloo"
+                  >
+                    (#39)
+                  </a>{" "}
+                  and Laurier’s top 10 Canadian BBA combine math and business
+                  expertise.
                 </p>
               </div>
               <button className="linkedin-button">
