@@ -26,10 +26,10 @@ export default function Contact() {
     // EmailJS service call
     emailjs
       .send(
-        "service_yd7eyaw", // Your EmailJS service ID
-        "template_8ne38ag", // Your EmailJS template ID
-        formData, // Form data that will be sent to the template
-        "Rol2lw6W-O0xjoaYo" // Your EmailJS public API key
+        "service_yd7eyaw",
+        "template_8ne38ag",
+        formData,
+        "Rol2lw6W-O0xjoaYo"
       )
       .then((result) => {
         console.log(result.text);
@@ -82,7 +82,7 @@ export default function Contact() {
           ></textarea>
           <button type="submit">Send Message</button>
         </form>
-        {status && <p>{status}</p>} {/* Show status message */}
+        {status && <p>{status}</p>}
       </div>
     </section>
   );

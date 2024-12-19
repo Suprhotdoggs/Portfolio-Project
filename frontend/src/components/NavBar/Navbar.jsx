@@ -1,6 +1,5 @@
 import * as React from "react";
-import { useLocation } from "react-router-dom";
-import { Link, scroller } from "react-scroll";
+import { Link } from "react-scroll";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -20,40 +19,33 @@ const navScroll = ["about", "portfolio", "contact"];
 
 export default function Navbar({ user }) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const location = useLocation(); // Get current path
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  const filteredNavItem = user
-    ? navItems.filter((item) => item !== "Register")
-    : navItems;
-
-  const filteredNavScroll = user
-    ? navScroll.filter((_, index) => navItems[index] !== "Register")
-    : navScroll;
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <List>
-        {navItems.map((navItem) => (
-          <ListItem key={navItem} disablePadding>
+        {navScroll.map((section, index) => (
+          <ListItem key={section} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <Link
+                to={section}
+                spy={true}
+                smooth={true}
+                offset={-60}
+                duration={500}
+                onClick={handleDrawerToggle}
                 style={{
                   textDecoration: "none",
                   color: "inherit",
-                  position: "relative",
-                  display: "inline-block",
+                  cursor: "pointer",
                   paddingBottom: "5px",
-                  borderBottom:
-                    location.pathname === `/${navItem.toLowerCase()}`
-                      ? "2px solid #00bcd4"
-                      : "2px solid transparent",
-                  transition: "border-color 0.3s ease",
+                  display: "inline-block",
                 }}
               >
-                {navItem}
+                {navItems[index]}
               </Link>
             </ListItemButton>
           </ListItem>
@@ -81,23 +73,13 @@ export default function Navbar({ user }) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <h4
-              style={{
-                fontFamily: '"Sixtyfour Convergence", sans-serif',
-                fontOpticalSizing: "auto",
-                fontWeight: 400,
-                fontStyle: "normal",
-              }}
-            >
-              <Link>M J</Link>
-            </h4>
+            M J
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {filteredNavItem.map((navItem, index) => (
-              <Button key={navItem} sx={{ color: "#fff" }}>
+            {navScroll.map((section, index) => (
+              <Button key={section} sx={{ color: "#fff" }}>
                 <Link
-                  activeClass="active"
-                  to={navScroll[index] || ""}
+                  to={section}
                   spy={true}
                   smooth={true}
                   offset={-60}
@@ -105,17 +87,11 @@ export default function Navbar({ user }) {
                   style={{
                     textDecoration: "none",
                     color: "white",
-                    position: "relative",
-                    display: "inline-block",
+                    cursor: "pointer",
                     paddingBottom: "5px",
-                    borderBottom:
-                      location.pathname === `/${navItem.toLowerCase()}`
-                        ? "2px solid #00bcd4"
-                        : "2px solid transparent",
-                    transition: "border-color 0.3s ease",
                   }}
                 >
-                  {navItem}
+                  {navItems[index]}
                 </Link>
               </Button>
             ))}
